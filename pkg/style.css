@@ -1,0 +1,97 @@
+
+.waxed-boilerplate {
+
+}
+
+div.gallerista-box {
+
+  overflow:hidden;
+
+}
+
+div.gallerista-strip {
+
+  overflow-y:hidden;
+  overflow-x:hidden;
+  display:block;
+  margin-top:5px;
+
+}
+
+div.gallerista-strip-inside {
+
+  height: 80px;
+  display:block;
+  width:5000px;
+
+}
+
+div.gallerista-strip img.thumbnail{
+
+  display:table-cell;
+  height:80px;
+  margin-right:5px;
+  cursor: pointer;
+
+}
+
+
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap{
+  position: relative;
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll{
+  overflow: auto;
+  position: relative;
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next,
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev{
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  font-size: 20px;
+  line-height: 20px;
+  display: block;
+  padding: 30px 8px;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0,0.65);
+  cursor: pointer;
+  margin-top: -40px;
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next.hide,
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev.hide{
+  display: none;
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next:hover,
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev:hover,
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next:focus,
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev:focus{
+  opacity: 1;
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next:before,
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev:before{
+  display: inline;
+  font-family: "FontAwesome";
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next:before{
+  content: "\f105";
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev:before{
+  content: "\f104";
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-next{
+  right: 0;
+}
+
+div.waxed-gallerista .jquery-horizontal-scroll-wrap .nav-prev{
+  left: 0;
+}
