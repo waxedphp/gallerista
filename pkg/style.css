@@ -22,13 +22,12 @@ div.gallerista-strip-inside {
 
   height: 80px;
   display:block;
-  width:5000px;
+  width:50000px;
 
 }
 
 div.gallerista-strip img.thumbnail{
 
-  display:table-cell;
   height:80px;
   margin-right:5px;
   cursor: pointer;

@@ -41,12 +41,16 @@
         $(a).addClass('gallerista-box');
         let b = $('<img>').appendTo(a);
         $(b).addClass('responsive').addClass('small-round');
+        let bb = $('<img>').appendTo(a).hide();
+        $(bb).addClass('responsive').addClass('small-round');
 
         if (typeof rec.images == 'object') {
           $(b).attr("src",rec.images[0].image);
+          $(bb).attr("src",rec.images[0].image);
         }
         this.mainImageBox = a;
         this.mainImage = b;
+        this.mainImageCopy = bb;
         $(this.mainImage).swipe( {
           //Generic swipe handler for all directions
           swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -160,18 +164,19 @@
         that.index = that.index+1;
         var thumb = that.getThumbByIndex();
         var w=$(that.mainImage).width();
-        var ia = $( '<img>' );
-        $(ia).attr("src", $(that.mainImage).attr('src'));
-        $(ia).addClass('responsive').addClass('small-round');
-        $(ia).prependTo(that.mainImageBox);
+        var h=$(that.mainImageBox).height();
+        $(that.mainImageBox).css('height', h);
+        $(that.mainImageCopy).show();
         $(that.mainImage).hide();
         that.clicked(that.index, thumb);
-        $( ia ).animate({
+        $(that.mainImageCopy).animate({
           left: "-="+w
-        }, 200, function() {
+        }, 400, function() {
           // Animation complete.
-          $(ia).remove();
+          $(that.mainImageCopy).hide().css('left', 0);
           $(that.mainImage).show();
+          $(that.mainImageBox).css('height', 'auto');
+          $(that.mainImageCopy).attr('src', $(that.mainImage).attr('src'));
           //$(that.mainImage).css({opacity:0}).animate({opacity:100},5000);
         });
       },
@@ -179,19 +184,20 @@
         that.index = that.index-1;
         var thumb = that.getThumbByIndex();
         var w=$(that.mainImage).width();
-        var ia = $( '<img>' );
-        $(ia).attr("src", $(that.mainImage).attr('src'));
-        $(ia).addClass('responsive').addClass('small-round');
-        $(ia).prependTo(that.mainImageBox);
+        var h=$(that.mainImageBox).height();
+        $(that.mainImageBox).css('height', h);
+        $(that.mainImageCopy).show();
         $(that.mainImage).hide();
         that.clicked(that.index, thumb);
-        $( ia ).animate({
+        $(that.mainImageCopy).animate({
           left: "+="+w
-        }, 200, function() {
+        }, 400, function() {
           // Animation complete.
-          $(ia).remove();
+          $(that.mainImageCopy).hide().css('left', 0);
           $(that.mainImage).show();
+          $(that.mainImageBox).css('height', 'auto');
           //$(that.mainImage).css({opacity:0}).animate({opacity:100},5000);
+          $(that.mainImageCopy).attr('src', $(that.mainImage).attr('src'));
         });
 
       },
