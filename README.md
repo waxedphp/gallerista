@@ -37,10 +37,10 @@ composer exec "wax --development"
 composer exec "wax --list"
 
 # compile either all of them:
-composer exec "wax --build-all"
+composer exec "wax --compile-all"
 
 # or compile just particular one:
-composer exec "wax --build=[NUMBER]"
+composer exec "wax --compile=[NUMBER]"
 
 # switch WaxedPHP to production, to see results:
 composer exec "wax --production"
