@@ -11,7 +11,7 @@ Prior to installation, this package must be already installed: waxedphp/waxedphp
 Prior to installation, this package must be already installed: waxedphp/waxedphp .
 
 
-```
+```bash
 
 # installs php package:
 composer require waxedphp/gallerista
@@ -28,7 +28,7 @@ Assuming, that you properly installed and configured package
 waxedphp/waxedphp, you can use wax binary:
 
 
-```
+```bash
 
 # be sure, that you switched WaxedPHP to development mode:
 composer exec "wax --development"
