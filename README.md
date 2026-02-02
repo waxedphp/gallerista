@@ -1,7 +1,17 @@
-# Name...
+# Gallerista
 
-... - within WaxedPHP environment.
+Simple gallery - within WaxedPHP environment.
 
 This package contains helper plugin functionality for WaxedPHP.
 All required third party sources will be downloaded to npm during composer installation.
 Prior to installation, this package must be already installed: waxedphp/waxedphp .
+
+## Install:
+
+Prior to installation, this package must be already installed: waxedphp/waxedphp .
+
+
+```
+composer exec "wax --install=gallerista"
+
+```
