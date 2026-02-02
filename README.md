@@ -12,6 +12,8 @@ Prior to installation, this package must be already installed: waxedphp/waxedphp
 
 
 ```
+
+composer require waxedphp/gallerista
 composer exec "wax --install=gallerista"
 
 ```
